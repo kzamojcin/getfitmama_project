@@ -1,0 +1,34 @@
+.headline{	
+	position: relative;
+	padding-bottom: 0.625rem;
+	margin: 0 auto 90px auto;
+	width: 140px;
+	font-size: 1.425rem;
+	border-bottom: 1px solid $mainWhite;	
+	color: $mainWhite;
+	
+	@mixin atSmall{
+	}
+	@mixin atMedium{
+		margin: 0 auto 120px auto;
+		padding-bottom: 0.625rem;
+		width: 190px;
+		font-size: 2.125rem;
+	}
+	&--black{
+		color: black;
+		border-bottom: 1px solid black;
+	}
+	&--centered{
+		text-align: center;
+	}
+	&--light{
+		font-weight: 400;
+	}
+	&--uppercase{
+		text-transform: uppercase;
+		font-family: 'Lato', sans-serif;
+		font-weight: 700;
+		letter-spacing: 4px;
+	}
+}

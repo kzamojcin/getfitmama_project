@@ -1,0 +1,44 @@
+.go-top-arrow{
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 9999;
+	top: 90%;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	background-color: #e6dfd5;
+	transition: all .5s ease-in-out, background-color .1s ease-in-out;
+	border-radius: 20%;
+	
+	&::before{
+		position: absolute;
+		content: '';
+		top: 7px;
+		left: -8px;
+		width: 33px;
+		height: 10px;
+		background-color: white;
+		transform-origin: top right;
+		transform: rotate(315deg);
+		
+	}
+	&__right-bar{
+		position: absolute;
+		top: 7px;
+		left: 25px;
+		width: 33px;
+		height: 10px;
+		background-color: black;
+		transform-origin: top left;
+		transform: rotate(45deg);
+	}
+	&:hover{
+		background-color: #c6b69f;
+	}
+
+}
+.arrow--visible{
+	visibility: visible;
+	opacity: 1;	
+}

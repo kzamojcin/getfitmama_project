@@ -1,0 +1,73 @@
+.stores__paragraph{
+	&__container{
+		position: relative;
+		line-height: 1.875;
+		padding-bottom: 50px;
+		p{				
+			margin-bottom: 0;
+			margin-top: 0;
+			font-variant: small-caps;
+		}
+		@mixin atLarge{			
+			top: 80px;
+		}
+	}
+	&__city-name{
+		position: relative;
+		font-size: 1.02rem;
+		text-transform: uppercase;
+		padding-bottom: 14px;
+		margin-bottom: 0;
+	}
+	&__description{
+		font-size: 0.828rem;
+		letter-spacing: 2px;
+	}
+	&__image{
+		position: relative;
+		display: block;	
+		width: 100%;
+
+		&--right{
+			margin-bottom: 70px;
+			@mixin atLarge{
+				margin-bottom: 0;
+			}
+		}
+		@mixin atLarge{
+				max-width: 496px;
+		}	
+		&--shadow{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			outline: 2px solid black;
+			box-shadow: inset 0 0 3px 3px rgba(0, 0, 1, 0.4);
+			@mixin atLarge{
+				max-width: 496px;				
+			}
+		}
+	}
+	&__company-name{
+		margin-bottom: 0;
+		margin-top: 0;
+		font-variant: small-caps;
+		font-weight: normal;
+	}	
+	&--visible-until-large{
+		display: block;
+		@mixin atLarge{
+			display: none;
+		}
+	}
+	&--hidden-until-large{
+		display: none;
+		@mixin atLarge{
+			display: block;
+		}
+	}
+	&__phone-number{
+		color: #333;
+	}
+}

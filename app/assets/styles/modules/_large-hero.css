@@ -1,0 +1,88 @@
+.large-hero{
+	position: relative;
+	text-align: center;
+	overflow-x: hidden;
+	&__image{
+		display: block;
+
+		&--full-width{
+			width: 100%;
+		}
+	}
+	&__r-black-bar{
+		position: absolute;
+		top: 0;
+		right: 0px;
+		height: 100%;
+		width: 10px;
+		background-color: black;
+	}
+	&__call-container{
+		position: absolute;
+		top: 70%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&__text-content{
+		position: relative;
+		display: inline-block;
+		z-index: 2;
+		width: 280px;
+		border: 2.38px solid $mainWhite;
+		@mixin atSmall{
+			width: 465px;
+		}
+		@mixin atLarge{			
+			width: 704px;
+		}
+	}
+	&__text-content--shadow{
+		position: relative;
+		width: 277px;
+		top: -31px;
+		left: 5px;
+		z-index: 1;
+		box-shadow: inset 0px -0px 2px 1px rgba(0, 0, 1, 0.75), 0px -0px 2px 1px rgba(0, 0, 1, 0.75);
+		padding: 2px 0;
+		@mixin atSmall{
+			width: 463px;
+			top: -51px;
+			left: 6px;			
+		}
+		@mixin atLarge{			
+			width: 701px;
+			top: -82px;
+			left: 8px;
+			box-shadow: inset 0px -0px 3px 2px rgba(0, 0, 1, 0.75), 0px -0px 3px 2px rgba(0, 0, 1, 0.75);
+		}
+		h1{
+			visibility: hidden;
+			font-size: 1.2rem;
+			@mixin atSmall{
+				font-size: 2.2rem;
+			}
+			@mixin atLarge{
+				font-size: 3.8rem;
+			}			
+		}	
+	}
+	&__title{
+		position: relative;		
+		margin: 0;
+		font-size: 1.3rem;
+		transform: scaleY(1.2);
+		font-weight: 400;
+		letter-spacing: 2px;		
+		color: $mainWhite;
+		text-transform: uppercase;		
+		text-shadow: 1.778px -1.778px 1px rgba(0, 0, 1, 0.75);
+		@mixin atSmall{			
+			font-size: 2.28rem;
+			text-shadow: 4.278px -3.278px 1px rgba(0, 0, 1, 0.75);
+		}
+		@mixin atLarge{
+			font-size: 3.9rem;
+			text-shadow: 5.778px -4.778px 3px rgba(0, 0, 1, 0.75);
+		}
+	}
+}

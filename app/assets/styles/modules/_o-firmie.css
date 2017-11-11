@@ -1,0 +1,66 @@
+.o-firmie{
+	position: relative;	
+	&__animation-container{
+		position: relative;
+	}
+	&__text{
+		position: absolute;
+		z-index: 4;
+		display: none;		
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		color: $mainWhite;
+		max-width: 600px;
+		min-width: 200px;
+		font-size: 0.725rem;		
+		letter-spacing: 1px;
+		line-height: 1.85;
+		font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		font-weight: 400;
+
+		@mixin atMedium{
+			display: block;
+		}
+		@mixin atLarge{
+		}
+		&--short{
+			display: block;
+			font-size: 0.45rem;
+			@mixin atSmall{
+			}
+			@mixin atMedium{
+				display: none;
+			}
+		}
+	}
+
+	&__video_frame{
+		position: absolute;
+		top: 0;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		&--shadow{
+			box-shadow: inset 0 0 10px 10px black;
+		}
+		&--black-screen{
+			background-color: black;
+			opacity: .5;
+		}
+	}
+	&--visible-until-medium{
+		display: block;
+		@mixin atMedium{
+			display: none;
+		}
+	}
+	&--hidden-until-medium{
+		display: none;
+		@mixin atMedium{
+			display: block;
+		}
+	}
+}
