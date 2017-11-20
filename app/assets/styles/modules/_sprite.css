@@ -3,21 +3,21 @@ Instead edit gulp/templates/sprite.css*/
 
 		/*Web*/
 		.icon{
-			background-image: url('../../assets/images/sprites/sprite-0eb273b2.svg');
+			background-image: url('../../assets/images/sprites/sprite-f1e18ae5.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 		.no-svg .icon{
-			background-image: url('../../assets/images/sprites/sprite-0eb273b2.png');			
+			background-image: url('../../assets/images/sprites/sprite-f1e18ae5.png');			
 		}
 		/*Local*/
 		/*.icon{
-			background-image: url('/assets/images/sprites/sprite-0eb273b2.svg');
+			background-image: url('/assets/images/sprites/sprite-f1e18ae5.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 		.no-svg .icon{
-			background-image: url('/assets/images/sprites/sprite-0eb273b2.png');			
+			background-image: url('/assets/images/sprites/sprite-f1e18ae5.png');			
 		}*/
 
 	.icon--facebook {		
@@ -29,7 +29,7 @@ Instead edit gulp/templates/sprite.css*/
 	.icon--facebook-mini {		
 		width: 25px;
 		height: 25px;		
-		background-position: 87.75510204081633% 32.608695652173914%;		
+		background-position: 85.31746031746032% 35.21739130434783%;		
 	}
 
 	.icon--googleplus {		
@@ -41,7 +41,7 @@ Instead edit gulp/templates/sprite.css*/
 	.icon--googleplus-mini {		
 		width: 25px;
 		height: 24.2px;		
-		background-position: 97.95918367346938% 32.44746600741656%;		
+		background-position: 95.23809523809524% 35.04326328800989%;		
 	}
 
 	.icon--instagram {		
@@ -53,11 +53,11 @@ Instead edit gulp/templates/sprite.css*/
 	.icon--instagram-mini {		
 		width: 25px;
 		height: 25.1px;		
-		background-position: 77.55102040816327% 32.62896208825357%;		
+		background-position: 75.39682539682539% 35.23927905531386%;		
 	}
 
 	.icon--logo {		
-		width: 79.7px;
-		height: 52.5px;		
-		background-position: 99.84235417761428% 0;		
+		width: 86.2px;
+		height: 56.7px;		
+		background-position: 99.58071278825996% 0;		
 	}

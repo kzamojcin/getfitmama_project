@@ -20,10 +20,7 @@ video{
 a{
 	color: $mainTurquoise;
 	text-decoration: none;
-}
-
-.MeetFitMama_FitPregnancy_FitMenopause_Nutrition {
-  font-size: 15px;
-  font-family: "Saira SemiCondensed";
-  color: rgb(121, 207, 206);
+	&:hover{
+		color: $mainPink;
+	}	
 }

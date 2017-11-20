@@ -81,72 +81,15 @@
 		}
 		@mixin atLarge{
 			font-size: 39.25px;
-			  font-family: "PT Sans";
-			  color: rgb(121, 207, 206);
-			  font-weight: bold;
-			  font-style: italic;
-			  text-transform: uppercase;
-			  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
-			  line-height: 1.2;
-			  position: absolute;			  
-			  top: -652.638px;
-			  width: 410px;
-			  height: 124px;
-			  z-index: 67;
+			font-family: "PT Sans";
+			color: rgb(121, 207, 206);
+			font-weight: bold;
+			font-style: italic;
+			text-transform: uppercase;
+			text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
+			line-height: 1.2;
+			position: absolute;			  
+			top: -652.638px;
 		}
 	}
-}
-
-.Start_feeling_better__Start_working_out__Start_ {
-  font-size: 45px;
-  font-family: "PT Sans";  
-  font-weight: bold;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
-  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
-  -moz-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
-  -webkit-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
-  -ms-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
-  position: absolute;
-  left: 1522.764px;
-  top: 246.75px;
-  width: 467.079px;
-  height: 140px;
-  z-index: 65;
-}
-.Start_feeling_better__Start_working_out__Start_ {
-  font-size: 39.25px;
-  font-family: "PT Sans";
-  color: rgb(121, 207, 206);
-  font-weight: bold;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: left;
-  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
-  position: absolute;
-  left: 1540.392px;
-  top: 483.638px;
-  width: 423px;
-  height: 136px;
-  z-index: 66;
-}
-
-.Start_Feeling_Better_Start_Working_out_Start_wi {
-  font-size: 39.25px;
-  font-family: "PT Sans";
-  color: rgb(121, 207, 206);
-  font-weight: bold;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
-  position: absolute;
-  left: 1989.392px;
-  top: 244.638px;
-  width: 423px;
-  height: 137px;
-  z-index: 67;
 }

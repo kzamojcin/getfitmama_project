@@ -18,7 +18,8 @@
 		}
 	}
 	a{
-		font-size: 0.9375rem ;
+		/* font-size: 0.9375rem; */
+		font-size: 1.0375rem;
 	}
 	ul{		
 		/*padding: 10px 0;*/

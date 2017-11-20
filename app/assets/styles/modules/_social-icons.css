@@ -1,36 +1,36 @@
 .social-icons{
 	display: none;
 	@mixin atMedium{
-		display: block;
+		/* display: block;
 		position: fixed;
 		top: 40%;
 		left: 0;	
-		z-index: 3;	
+		z-index: 3;	 */
 
 		&--background{
-			position: relative;
+			/* position: relative;
 			width: 30px;
 			height: 30px;		
 			margin-bottom: 6px;
 			background-color: $mainWhite;
 			box-shadow: 0 0 3px 0px black;
-			transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out; */
 
 			&:hover{
-				width: 50px;
+				/* width: 50px;
 				.social-icons__image{
 					left: 65%;
 					transform: translate(-50%, -50%) scale(1.2);
-				}
+				} */
 			}
 		}
 		&__image{
-			position: relative;
+			/* position: relative;
 			border-radius: 5px;
 			left: 50%;
 			top: 50%;			
 			transform: translate(-50%, -50%);			
-			transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out; */
 		}
 	}
 }
