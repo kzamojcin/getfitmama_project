@@ -451,7 +451,7 @@ template {
 }
 
 body {
-	font-family: 'Ubuntu Mono', monospace;
+	font-family: "Saira SemiCondensed", monospace;
 	color: #333;
 	background-color: #f6f6f6;
 	/*overflow-x: hidden;*/
@@ -473,13 +473,19 @@ video{
 }
 
 a{
-	color: #f6f6f6;
+	color: #7acdcd;
 	text-decoration: none;
+}
+
+.MeetFitMama_FitPregnancy_FitMenopause_Nutrition {
+  font-size: 15px;
+  font-family: "Saira SemiCondensed";
+  color: rgb(121, 207, 206);
 }
 
 .large-hero{
 	position: relative;
-	text-align: center;
+	text-align: left;
 	overflow-x: hidden;
 }
 
@@ -512,8 +518,7 @@ a{
 		position: relative;
 		display: inline-block;
 		z-index: 2;
-		width: 280px;
-		border: 2.38px solid #f6f6f6;
+		width: 350px;
 	}
 
 @media (min-width: 530px){
@@ -584,11 +589,10 @@ a{
 		position: relative;		
 		margin: 0;
 		font-size: 1.3rem;
-		-webkit-transform: scaleY(1.2);
-		        transform: scaleY(1.2);
+		/*transform: scaleY(1.2);*/
 		font-weight: 400;
 		letter-spacing: 2px;		
-		color: #f6f6f6;
+		color: #7acdcd;
 		text-transform: uppercase;		
 		text-shadow: 1.778px -1.778px 1px rgba(0, 0, 1, 0.75);
 	}
@@ -604,10 +608,76 @@ a{
 @media (min-width: 1010px){
 
 .large-hero__title{
-			font-size: 3.9rem;
-			text-shadow: 5.778px -4.778px 3px rgba(0, 0, 1, 0.75)
+			font-size: 39.25px;
+			  font-family: "PT Sans";
+			  color: rgb(121, 207, 206);
+			  font-weight: bold;
+			  font-style: italic;
+			  text-transform: uppercase;
+			  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
+			  line-height: 1.2;
+			  position: absolute;			  
+			  top: -652.638px;
+			  width: 410px;
+			  height: 124px;
+			  z-index: 67
 	}
 	}
+
+.Start_feeling_better__Start_working_out__Start_ {
+  font-size: 45px;
+  font-family: "PT Sans";  
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
+  -moz-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
+  -webkit-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
+  -ms-transform: matrix( 0.87050821736795,0,0,0.87221363937321,0,0);
+  position: absolute;
+  left: 1522.764px;
+  top: 246.75px;
+  width: 467.079px;
+  height: 140px;
+  z-index: 65;
+}
+
+.Start_feeling_better__Start_working_out__Start_ {
+  font-size: 39.25px;
+  font-family: "PT Sans";
+  color: rgb(121, 207, 206);
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
+  position: absolute;
+  left: 1540.392px;
+  top: 483.638px;
+  width: 423px;
+  height: 136px;
+  z-index: 66;
+}
+
+.Start_Feeling_Better_Start_Working_out_Start_wi {
+  font-size: 39.25px;
+  font-family: "PT Sans";
+  color: rgb(121, 207, 206);
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: -2.544px -1.59px 7px rgba(0, 0, 0, 0.35);
+  position: absolute;
+  left: 1989.392px;
+  top: 244.638px;
+  width: 423px;
+  height: 137px;
+  z-index: 67;
+}
 
 .wrapper{
 	overflow: hidden;
@@ -1028,66 +1098,66 @@ Instead edit gulp/templates/sprite.css*/
 /*Web*/
 
 .icon{
-			background-image: url('../../assets/images/sprites/sprite-b2f1a5f1.svg');
+			background-image: url('../../assets/images/sprites/sprite-0eb273b2.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 
 .no-svg .icon{
-			background-image: url('../../assets/images/sprites/sprite-b2f1a5f1.png');			
+			background-image: url('../../assets/images/sprites/sprite-0eb273b2.png');			
 		}
 
 /*Local*/
 
 /*.icon{
-			background-image: url('/assets/images/sprites/sprite-b2f1a5f1.svg');
+			background-image: url('/assets/images/sprites/sprite-0eb273b2.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 		.no-svg .icon{
-			background-image: url('/assets/images/sprites/sprite-b2f1a5f1.png');			
+			background-image: url('/assets/images/sprites/sprite-0eb273b2.png');			
 		}*/
 
 .icon--facebook {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 31.38121546961326%;		
+		background-position: 0 0;		
 	}
 
 .icon--facebook-mini {		
 		width: 25px;
 		height: 25px;		
-		background-position: 96.84684684684684% 26.05504587155963%;		
+		background-position: 87.75510204081633% 32.608695652173914%;		
 	}
 
 .icon--googleplus {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 65.6353591160221%;		
+		background-position: 0 50%;		
 	}
 
 .icon--googleplus-mini {		
 		width: 25px;
 		height: 24.2px;		
-		background-position: 85.58558558558559% 37.43144424131627%;		
+		background-position: 97.95918367346938% 32.44746600741656%;		
 	}
 
 .icon--instagram {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 99.88950276243094%;		
+		background-position: 0 100%;		
 	}
 
 .icon--instagram-mini {		
 		width: 25px;
 		height: 25.1px;		
-		background-position: 85.58558558558559% 26.06700321248279%;		
+		background-position: 77.55102040816327% 32.62896208825357%;		
 	}
 
 .icon--logo {		
-		width: 247px;
-		height: 56.8px;		
-		background-position: 0 0;		
+		width: 79.7px;
+		height: 52.5px;		
+		background-position: 99.84235417761428% 0;		
 	}
 
 .site-footer__text{
@@ -1117,10 +1187,10 @@ Instead edit gulp/templates/sprite.css*/
 	height: 66px;
 	position: relative;
 	z-index: 2;
-	background-color: black;
+	background-color: white;
 	font-size: 0.875rem;
-	text-transform: uppercase;
-	letter-spacing: 0.09375rem;
+	font-variant: small-caps;
+	letter-spacing: 0.05rem;
 	-webkit-box-shadow: 0px 3px 3px 0 rgba(0,0,0,0.4);
 	        box-shadow: 0px 3px 3px 0 rgba(0,0,0,0.4);
 }
@@ -1334,16 +1404,12 @@ Instead edit gulp/templates/sprite.css*/
 		}
 	}
 
-.primary-nav li:first-child{
+/*li:first-child{
 		padding-top: 0;
-	}
-
-@media (min-width: 800px){
-
-.primary-nav li:first-child{
-			padding-top: 5px
-	}
-	}
+		@mixin atMedium{
+			padding-top: 5px;
+		}
+	}*/
 
 .primary-nav li{
 		padding-top: 10px;
@@ -1367,7 +1433,7 @@ Instead edit gulp/templates/sprite.css*/
 	}
 
 .primary-nav a{
-		font-size: 0.875rem ;
+		font-size: 0.9375rem ;
 	}
 
 .primary-nav ul{		

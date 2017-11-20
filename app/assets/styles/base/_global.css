@@ -1,5 +1,5 @@
 body {
-	font-family: 'Ubuntu Mono', monospace;
+	font-family: "Saira SemiCondensed", monospace;
 	color: #333;
 	background-color: #f6f6f6;
 	/*overflow-x: hidden;*/
@@ -18,6 +18,12 @@ video{
 	box-sizing: border-box;
 }
 a{
-	color: $mainWhite;
+	color: $mainTurquoise;
 	text-decoration: none;
+}
+
+.MeetFitMama_FitPregnancy_FitMenopause_Nutrition {
+  font-size: 15px;
+  font-family: "Saira SemiCondensed";
+  color: rgb(121, 207, 206);
 }

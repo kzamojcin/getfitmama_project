@@ -3,61 +3,61 @@ Instead edit gulp/templates/sprite.css*/
 
 		/*Web*/
 		.icon{
-			background-image: url('../../assets/images/sprites/sprite-b2f1a5f1.svg');
+			background-image: url('../../assets/images/sprites/sprite-0eb273b2.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 		.no-svg .icon{
-			background-image: url('../../assets/images/sprites/sprite-b2f1a5f1.png');			
+			background-image: url('../../assets/images/sprites/sprite-0eb273b2.png');			
 		}
 		/*Local*/
 		/*.icon{
-			background-image: url('/assets/images/sprites/sprite-b2f1a5f1.svg');
+			background-image: url('/assets/images/sprites/sprite-0eb273b2.svg');
 			display: inline-block;
 			margin: 0 auto;
 		}
 		.no-svg .icon{
-			background-image: url('/assets/images/sprites/sprite-b2f1a5f1.png');			
+			background-image: url('/assets/images/sprites/sprite-0eb273b2.png');			
 		}*/
 
 	.icon--facebook {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 31.38121546961326%;		
+		background-position: 0 0;		
 	}
 
 	.icon--facebook-mini {		
 		width: 25px;
 		height: 25px;		
-		background-position: 96.84684684684684% 26.05504587155963%;		
+		background-position: 87.75510204081633% 32.608695652173914%;		
 	}
 
 	.icon--googleplus {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 65.6353591160221%;		
+		background-position: 0 50%;		
 	}
 
 	.icon--googleplus-mini {		
 		width: 25px;
 		height: 24.2px;		
-		background-position: 85.58558558558559% 37.43144424131627%;		
+		background-position: 97.95918367346938% 32.44746600741656%;		
 	}
 
 	.icon--instagram {		
 		width: 190px;
 		height: 62px;		
-		background-position: 0 99.88950276243094%;		
+		background-position: 0 100%;		
 	}
 
 	.icon--instagram-mini {		
 		width: 25px;
 		height: 25.1px;		
-		background-position: 85.58558558558559% 26.06700321248279%;		
+		background-position: 77.55102040816327% 32.62896208825357%;		
 	}
 
 	.icon--logo {		
-		width: 247px;
-		height: 56.8px;		
-		background-position: 0 0;		
+		width: 79.7px;
+		height: 52.5px;		
+		background-position: 99.84235417761428% 0;		
 	}
