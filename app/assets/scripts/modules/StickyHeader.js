@@ -8,17 +8,20 @@ class StickyHeader{
 		this.siteHeader = $('.site-header__menu-content');
 		this.menuIcon = $(".site-header__menu-icon");
 		this.goTop = $('#go-top-link');
-		this.headerTrigger = $('.large-hero__title');
+		this.headerTrigger = $('.large-hero__learn-more-btn');
 		this.pageSections = $('.page-section');
 		this.headerLinks = $('.primary-nav a');
-		this.createGoTopArrowWaypoint();
+		this.categoryLink = $('#go-category-link');
+		// this.createGoTopArrowWaypoint();
 		this.createHideMobileMenuOutOfSight();
 		this.createPageSectionWaypoints();
+		this.createGoCategoryWaypoint();
 		this.addSmoothScrolling();		
 	}
 	addSmoothScrolling(){
 		this.headerLinks.smoothScroll();
 		this.goTop.smoothScroll();
+		this.categoryLink.smoothScroll();
 	}
 
 	createGoTopArrowWaypoint(){
@@ -30,6 +33,19 @@ class StickyHeader{
 					that.goTopArrow.addClass("arrow--visible");
 				}else{
 					that.goTopArrow.removeClass("arrow--visible");
+				}
+			}
+		});
+	}
+	createGoCategoryWaypoint(){
+		var that = this;
+		new Waypoint({
+			element: this.categoryLink[0],
+			handler: function(direction){
+				if(direction == "down"){
+					that.goTopArrow.addClass("arrow--visiblede");
+				}else{
+					that.goTopArrow.removeClass("arrow--visiblede");
 				}
 			}
 		});

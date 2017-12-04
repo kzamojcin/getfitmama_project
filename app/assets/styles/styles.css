@@ -3,12 +3,13 @@
 @import "base/_global";
 @import "base/_mixins";
 @import "modules/_large-hero";
+@import "modules/_btn";
 @import "modules/_wrapper";
 @import "modules/_page-section";
 @import "modules/_headline";
 @import "modules/_row";
 @import "modules/_generic-content-container";
-@import "modules/_testimonial";
+@import "modules/_testimonials";
 @import "modules/_sprite";
 @import "modules/_site-footer";
 @import "modules/_site-header";
@@ -20,3 +21,6 @@
 @import "modules/_o-firmie";
 @import "modules/_stores";
 @import "modules/_go-top-arrow";
+@import "modules/_objectFit-workaround";
+@import "modules/_main-content";
+@import "modules/_divide-squares";

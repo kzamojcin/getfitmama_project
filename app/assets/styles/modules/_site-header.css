@@ -123,6 +123,7 @@
 		text-align: center;
 		transform: scale(.9);
 		top: 5px;
+		z-index: 2;
 		@mixin atMedium{			
 			float: left;		
 			color: white;
@@ -137,13 +138,7 @@
 			content: "";
 			clear: both;
 			display: table;
-		}/*
-		&__text{
-			position: absolute;	
-			text-indent: -9999px;		
-			left: 50%;
-			transform: translateX(-50%);
-		}*/
+		}
 		&__graphic{
 			position: absolute;			
 			left: 50%;

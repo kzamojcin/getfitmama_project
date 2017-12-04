@@ -1,6 +1,6 @@
 .row{
 	@mixin clearfix;
-	
+	height: 33.33%;
 	&__relative{
 		position: relative;
 	}
@@ -47,8 +47,11 @@
 
 	@mixin atLarge{
 		&__large-6{
+			position: relative;
 			width: 50%;
+			height: 100%;
 			float: left;
+			overflow: hidden;
 		}
 		&__stores--p-bottom-at-large{
 			margin-bottom: 165px;

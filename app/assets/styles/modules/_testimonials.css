@@ -1,0 +1,22 @@
+.testimonials{
+    max-width: 812px;
+    margin: 0 auto;    
+    margin-bottom: 4.1875rem;
+    p{
+        margin: 0;
+        padding-bottom: 4.1875rem;
+        font-family: "Source Sans Pro";
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.08rem;
+        color: rgb(98, 64, 139);
+    }    
+    &__video{     
+        margin: 0;   
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 566px;
+        border: 2px solid $mainBlue;
+    }
+}

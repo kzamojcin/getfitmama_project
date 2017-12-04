@@ -1,0 +1,9 @@
+.large-hero{
+    &.compat-object-fit {
+        background-size: cover;
+        background-position: center center;
+        .large-hero__image {
+            display: none;
+        }
+    }    
+}

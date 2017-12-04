@@ -1,0 +1,17 @@
+.divide-squares{
+    text-align: center;
+    margin: 67px auto;
+    
+    &__square{
+        position: relative;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: #c74e83;
+        margin: 0 9px;
+    }
+    &--no-m-bottom{
+        margin-bottom: 0;
+    }
+}
+  
