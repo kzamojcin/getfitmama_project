@@ -750,6 +750,14 @@ a{
 		display: table;
 	}
 
+.row--txt-align-c{
+		text-align: center;
+	}
+
+.row--txt-align-r{
+		text-align: right;
+	}
+
 .row__relative{
 		position: relative;
 	}
@@ -801,6 +809,10 @@ a{
 	}
 
 @media (min-width: 1010px){
+		.row__large-4{
+			width: 33.33%;
+			float: left;
+		}
 		.row__large-6{
 			position: relative;
 			width: 50%;
@@ -963,11 +975,6 @@ Instead edit gulp/templates/sprite.css*/
 			padding: 40px 0
 	}
 	}
-
-.site-footer__text__span-right{
-			position: absolute;
-			right: 0;
-		}
 
 .site-footer__span-colored{
 		color: #2595cd;
@@ -1301,7 +1308,8 @@ Instead edit gulp/templates/sprite.css*/
 }
 
 .social-icons{
-	display: none;
+	/* display: none; */
+	margin-right: 15px;
 }
 
 @media (min-width: 800px){

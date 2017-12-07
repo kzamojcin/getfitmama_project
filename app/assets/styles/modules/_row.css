@@ -1,6 +1,13 @@
 .row{
 	@mixin clearfix;
 	height: 33.33%;
+
+	&--txt-align-c{
+		text-align: center;
+	}
+	&--txt-align-r{
+		text-align: right;
+	}
 	&__relative{
 		position: relative;
 	}
@@ -46,6 +53,10 @@
 	}
 
 	@mixin atLarge{
+		&__large-4{
+			width: 33.33%;
+			float: left;
+		}
 		&__large-6{
 			position: relative;
 			width: 50%;

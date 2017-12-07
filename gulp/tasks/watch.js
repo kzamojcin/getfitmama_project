@@ -11,7 +11,7 @@ gulp.task('watch', function(){
 		}
 	});
 
-	watch(['./app/index.html','./app/fitPregnancy/index.html'], function(){
+	watch(['./app/index.html','./app/fitPregnancy/index.html','./app/fitMenopause/index.html','./app/nutrition/index.html'], function(){
 		browserSync.reload();
 	});
 
