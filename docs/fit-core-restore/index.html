@@ -10,8 +10,10 @@
   <title>GetFitMama - Fit Core Restore</title>
   <link rel="icon" type="image/png" href="../logo4_T.png">  
   <!--[if IE]><link rel="shortcut icon" href="favicon.ico"/><![endif]--><!-- Internet Explorer-->
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type='text/css'>
-  <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet" type='text/css'> 
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">	
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Indie+Flower|Kaushan+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed:300,500" rel="stylesheet">
   <!--build:css ../assets/styles/styles.css -->
   <link rel="stylesheet" href="../temp/styles/styles.css">
   <!-- endbuild -->
@@ -38,31 +40,38 @@
 			  	</div>
 			</div>
 
-			<div class="site-header__menu-icon">        
-				<div class="site-header__menu-icon__middle"></div>
+			<div class="site-header__menu-icon__border">
+				<div class="site-header__menu-icon">        
+					<div class="site-header__menu-icon__middle"></div>        
+				</div>
 			</div>
 
 			<div class="site-header__menu-content">
 				<nav class="primary-nav">
-					<ul>
+					<ul class="site-header__ul-desktop">
 						<li><a href="/blog" id="">Blog</a></li>
-						<li class="drop-down-menu">
-						<a href="../#go-category">Services</a>
+						<li><a href="#" class="open-modal">Contact</a></li>
+						<li class="drop-down-menu drop-down-menu--taller">
+							<a href="#" style="cursor: default;">Services</a>
 							<ul class="drop-down-menu__list">
 								<li><a href="/fit-pregnancy">FitPregnancy</a></li>
 								<li><a href="/fit-postpartum">FitPostpartum</a></li>
+								<li><a href="/fit-core-restore">FitCoreRestoring</a></li>
 								<li><a href="/fit-Menopause">FitMenopause</a></li>
 								<li><a href="/nutrition">Nutrition</a></li>
 							</ul>
-						</li>            
-						<!-- <li><a href="/nutrition">Nutrition</a></li> -->
-						<!-- <li><a href="/fitMenopause">FitMenopause</a></li> -->
-						<!-- <li><a href="/fitpregnancy">FitPregnancy</a></li> -->
+						</li>
 						<li><a href="/about-me">MeetFitMama</a></li>
-						<li><a href="../">Home</a></li>
+					</ul>
+					<ul class="site-header__ul-mobile">
+						<a href="../"><li>Home</li></a>
+						<a href="/about-me"><li>MeetFitMama</li></a>
+						<a href="../#go-category" id="go-category-link2"><li>Services</li></a>
+						<a href="#" class="open-modal" id=""><li>Contact</li></a>
+						<a href="/blog" id=""><li>Blog</li></
 					</ul>
 				</nav>
-      		</div>
+			</div>
     	</div>
   	</header>
 
@@ -77,9 +86,9 @@
 		<h1 class="main-content main-content__personal-note main-content__personal-note--wide">Hi, I'm happy to see you here :) Let me take care of You.</h2>
 		<h2 class="main-content main-content__title">Your core section</h1>
 			<article class="main-content main-content__article">		  	
-			<p class="main-content__article--indent">When you think of the core, chances are you think of the abs. However, the core </p><p>actually consists of all the muscles that encompass your midsection, back and hips. </p><p class="main-content__article--big main-content__article--tall-line-height">Pregnancy <span class="main-content__article--big--italic">(the weight of the baby)</span> and menopause <span class="main-content__article--big--italic">(hormonal and postural changes)</span> weakens all these areas.																</p>
-			<p class="main-content__article--indent">During pregnancy, as the belly expands, the abdominals stretch and the back </p><p>muscles shorten. The connective tissue in the abdomen thins and separates (Diastasis Recti). The ligaments and joints in the pelvis become very unstable. The pelvic floor often weakens under the weight of the baby. The rib cage and the diaphragm change to accommodate the growing belly and it affects breathing.</p>
-			<p class="main-content__article--big main-content__article--tall-line-height">Things don’t just snap back into place after the baby arrives.</p><p class="main-content__article--indent">The postpartum recovery period comes with its own set of physical challenges.</p>
+			<p><span class="main-content__article--indent">When</span> you think of the core, chances are you think of the abs. However, the core actually consists of all the muscles that encompass your midsection, back and hips. </p><p class="main-content__article--big main-content__article--tall-line-height">Pregnancy <span class="main-content__article--big--italic">(the weight of the baby)</span> and menopause <span class="main-content__article--big--italic">(hormonal and postural changes)</span> weakens all these areas.																</p>
+			<p><span class="main-content__article--indent">During </span> pregnancy, as the belly expands, the abdominals stretch and the back muscles shorten. The connective tissue in the abdomen thins and separates (Diastasis Recti). The ligaments and joints in the pelvis become very unstable. The pelvic floor often weakens under the weight of the baby. The rib cage and the diaphragm change to accommodate the growing belly and it affects breathing.</p>
+			<p class="main-content__article--big main-content__article--tall-line-height">Things don’t just snap back into place after the baby arrives.</p><p><span class="main-content__article--indent">The postpartum</span> recovery period comes with its own set of physical challenges.</p>
 		</article>	
 	</div>
 
@@ -89,38 +98,65 @@
 			<li>- Muscular tightness and weakness caused by more sedentary lifestyle,</li>
 			<li>- Kyphosis which can suppress the breathing patterns because of nursing, lifting and carrying the
 				baby,</li>
-			<li>- Postpartum problems:  diastasis recti, prolapse, urinary incontinence and painful scar tissue after <br />C-section and episiotomy.</li>
+			<li>- Postpartum problems:  diastasis recti, prolapse, urinary incontinence and painful scar tissue after C-section and episiotomy.</li>
 		</ul>
 	</div>
 	<div class="page-section main-content wrapper">		
 		<article class="main-content main-content__article">		  	
-			<p class="main-content__article--indent">Moving on to menopause when estrogen levels begin to drop, it may be harder to </p><p>control your bladder because of weakening of pelvic floor muscles. The weakened, tightened and overstretched muscles of your whole, affect alignment and in the long term can lead to injuries while exercising.
+			<p><span class="main-content__article--indent">Moving </span> on to menopause when estrogen levels begin to drop, it may be harder to control your bladder because of weakening of pelvic floor muscles. The weakened, tightened and overstretched muscles of your whole, affect alignment and in the long term can lead to injuries while exercising.
 				</p><p class="main-content__article--big main-content__article--tall-line-height">Also doing wrong type of exercises like crunches, which we all rush to do to get the six-pack, can make everything even worse.</p>
-			<p class="main-content__article--indent">Core restoring programme is designed to help prepare for challenges which women </p><p>face while their bodies change throughout their lives. It helps to safely strengthen the core muscles during the pregnancy, restore the core health after arrival of your baby and regain vitality during menopause.</p>
+			<p><span class="main-content__article--indent">Core</span> restoring programme is designed to help prepare for challenges which women face while their bodies change throughout their lives. It helps to safely strengthen the core muscles during the pregnancy, restore the core health after arrival of your baby and regain vitality during menopause.</p>
 		</article>	
 	</div>
 	<div class="page-section exercise-icons">
 			<p class="main-content exercise-icons__title">Core restoring program:</p>
+		<div class="exercise-icons__pictures--hidden-until-medium">
 			<div class="exercise-icons__gallery">				
-				<p><img src="../assets/images/temp_icons/pregnancy/posture.png" alt="xx">Prepare your body for all postural changes<span><br>x</span></p>
-				<p><img src="../assets/images/temp_icons/pregnancy/core.png" alt="xx">Strengthen your back and core muscles including pelvic floor</p>
-				<p><img src="../assets/images/temp_icons/pregnancy/bone.png" alt="xx">Help prevent / limit musculoskeletal problems<span><br>x</span></p>
+			<div class="exercise-icons__icons-container">
+				<img class="exercise-icons__img" src="../assets/images/temp_icons/posture.png" alt="xx">
+				<p class="exercise-icons__gallery--txt-color">Help to identify and address postural problems (lower back, pelvic, neck pain)</p>
 			</div>
-			<div class="exercise-icons__gallery exercise-icons__gallery--m-bottom">
-				<p><img src="../assets/images/temp_icons/pregnancy/scale.png" alt="xx">Control weight gain to avoid any pregnancy complications</p>
-				<p><img src="../assets/images/temp_icons/pregnancy/baby.png" alt="xx">Prepare for the labour to make it as a positive experience</p>
-			</div>	
-	
-			<div class="page-section c-t-a">
-				<p class="c-t-a--big">You can and you should exercise during pregnancy.</p>
-				<p class="c-t-a--small c-t-a--m-bottom">Let me show you how to safely stay fit while looking after your and your baby’s health.</p>
-				<div class="c-t-a__g-i-t">
-					<div class="c-t-a__g-i-t__btn">
-						<p>Get In Touch</p>
-					</div>
-				</div>
+			<div class="exercise-icons__icons-container">
+				<img class="exercise-icons__img" src="../assets/images/temp_icons/pelvic.png" alt="xx">
+				<p class="exercise-icons__gallery--txt-color">Heal and strengthen pelvic floor muscles to resolve postpartum complications (diastasis recti, prolapse, incontinence)</p>
+			</div>
+			<div class="exercise-icons__icons-container">
+				<img class="exercise-icons__img" src="../assets/images/temp_icons/breathe.png" alt="xx">
+				<p class="exercise-icons__gallery--txt-color">Retrain diaphragmatic breathing which is integral part of optimal core function</p>
+			</div>
+			</div>
+			<div class="exercise-icons__gallery">				
+			<div class="exercise-icons__icons-container">
+				<img class="exercise-icons__img" src="../assets/images/temp_icons/core.png" alt="xx">
+				<p class="exercise-icons__gallery--txt-color">Strengthen core muscles to regain strength in your lower back and core</p>
+			</div>
+			<div class="exercise-icons__icons-container">
+				<img class="exercise-icons__img" src="../assets/images/temp_icons/nutrition.png" alt="xx">
+				<p class="exercise-icons__gallery--txt-color">Educate how to eat, move and look after yourself to improve your vitality</p>
+			</div>
 			</div>
 		</div>
+		<ul class="exercise-icons__list exercise-icons__list--visible-until-medium">
+			<li>- Help to identify and address postural problems (lower back, pelvic, neck pain),</li>
+			<li>- Heal and strengthen pelvic floor muscles to resolve postpartum complications (diastasis recti, prolapse, incontinence),</li>
+			<li>- Retrain diaphragmatic breathing which is integral part of optimal core function,</li>
+			<li>- Strengthen core muscles to regain strength in your lower back and core,</li>
+			<li>- Educate how to eat, move and look after yourself to improve your vitality</li>			
+		</ul>
+	</div>
+
+
+
+
+	<div class="page-section c-t-a">
+		<p class="c-t-a--big">You can and you should exercise during pregnancy.</p>
+		<p class="c-t-a--small c-t-a--m-bottom">Let me show you how to safely stay fit while looking after your and your baby’s health.</p>
+		<div class="c-t-a__g-i-t">
+			<div class="c-t-a__g-i-t__btn open-modal">
+				<p>Get In Touch</p>
+			</div>
+		</div>
+	</div>
 	<div class="page-section testimonials">
 		<h1 class="main-content main-content__title">Testimonials</h1>
 		<p class="testimonials__name">Eva, Actress</p>
@@ -131,25 +167,42 @@
 	</div>
 
   	<footer class="site-footer">
-  	  <hr>
-  	  <div class="wrapper"> 
-		<div class="row site-footer site-footer__text">
-			<div class="row__large-4">	  
-				Copyright &copy; 2017 
-				<span class="site-footer__span-colored">GetFitMama</span>
-				. Wszystkie prawa zastrzeżone.
+		<hr>
+		<div class="wrapper"> 
+			<div class="row site-footer site-footer__text">
+				<div>    
+					Copyright &copy; 2017 
+					<span class="site-footer__span-colored">GetFitMama</span>
+					. Wszystkie prawa zastrzeżone.
+				</div>
+				<!-- <div class="row__large-4 row--txt-align-c">
+					<span class="social-icons icon icon--facebook-mini"></span>
+					<span class="social-icons icon icon--instagram-mini"></span>
+					<span class="social-icons icon icon--googleplus-mini"></span>
+				</div> -->
+				<div>
+					<span class="site-footer"> <a href="mailto:kzamojcin@gmail.com">Wykonanie: kzamojcin@gmail.com</a></span>
+				</div>						
 			</div>
-			<div class="row__large-4 row--txt-align-c">
-				<span class="social-icons icon icon--facebook-mini"></span>
-				<span class="social-icons icon icon--instagram-mini"></span>
-				<span class="social-icons icon icon--googleplus-mini"></span>
-			</div>
-			<div class="row__large-4 row--txt-align-c">
-				<span class="site-footer"> <a href="mailto:kzamojcin@gmail.com">Wykonanie: kzamojcin@gmail.com</a></span>
-			</div>
-			      
-  	  </div>
-  	</footer>
+		</div>
+	</footer>
+	<div class="modal">
+    	<div class="modal__inner">
+    	  	<h2 class="section-title section-title--blue section-title--less-margin">Get in <strong>Touch</strong></h2>
+      		<div class="wrapper wrapper--narrow">
+      		  <p class="modal__description">Feel free to choose any way you want to contact me :)</p>
+      		</div>
+      		<div class="social-icons">
+      		  <a href="https://www.facebook.com/" class="social-icons__icon"><span class="icon icon--facebook"></span></a>
+      		  <a href="https://www.twitter.com/" class="social-icons__icon"><span class="icon icon--twitter"></span></a>
+      		  <a href="mailto:kzamojcin@gmail.com" class="social-icons__icon"><span class="icon icon--mail"></span></a>
+      		  <a href="tel:0048 503-393-579" class="social-icons__icon"><span class="icon icon--phone"></span></a>
+      		  <a href="https://www.instagram.com/" class="social-icons__icon"><span class="icon icon--instagram"></span></a>
+      		  <a href="https://www.youtube.com/" class="social-icons__icon"><span class="icon icon--youtube"></span></a>
+      		</div>
+    	</div>
+		<div class="modal__close">X</div>
+	</div>
   	<!--build:js ../assets/scripts/App.js -->
   	<script src="/temp/scripts/App.js"></script>
   	<!-- endbuild -->

@@ -59,3 +59,4 @@ gulp.task('usemin', ['styles', 'scripts'], function(){
 
 
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'optimizeImages' ,'useminTrigger']);
+// gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);
