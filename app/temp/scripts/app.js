@@ -11113,24 +11113,19 @@ var _Modal = __webpack_require__(7);
 
 var _Modal2 = _interopRequireDefault(_Modal);
 
-var _VideoFrame = __webpack_require__(8);
-
-var _VideoFrame2 = _interopRequireDefault(_VideoFrame);
-
-var _ObjectFitWorkaround = __webpack_require__(9);
+var _ObjectFitWorkaround = __webpack_require__(8);
 
 var _ObjectFitWorkaround2 = _interopRequireDefault(_ObjectFitWorkaround);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '60%');
+new _RevealOnScroll2.default((0, _jquery2.default)('.feature-item'), '85%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.revealOnScroll-85'), '85%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.revealOnScroll-90'), '20%');
-var stickyHeader = new _StickyHeader2.default();
+var StickyHeaderer = new _StickyHeader2.default();
 var modal = new _Modal2.default();
-// var videoFrame = new VideoFrame();
-var objectFitWorkaround = new _ObjectFitWorkaround2.default();
+// var objectFitWorkaround = new ObjectFitWorkaround();
 
 /***/ }),
 /* 3 */
@@ -11157,22 +11152,68 @@ var MobileMenu = function () {
 	function MobileMenu() {
 		_classCallCheck(this, MobileMenu);
 
+		this.menuIconBorder = (0, _jquery2.default)('.site-header__menu-icon__border');
 		this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
 		this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
+		this.largeHeroCtaTop = (0, _jquery2.default)('.large-hero__CTA__top');
+		this.trapeze = (0, _jquery2.default)('.large-hero__mobile-svg-bg');
 		this.siteHeader = (0, _jquery2.default)('.site-header');
+
+		this.blinking_arrow = (0, _jquery2.default)('.blinking_arrow');
+
 		this.events();
+		this.blinkblink();
 	}
 
 	_createClass(MobileMenu, [{
 		key: 'events',
 		value: function events() {
-			this.menuIcon.click(this.toggleTheMenu.bind(this));
+			// this.menuIcon.click(this.toggleTheMenu.bind(this));
+			// this.menuIcon.click(this.menuBurger.bind(this));
+			// this.menuIcon.click(this.	.bind(this));
+			this.menuIconBorder.click(this.timedFunctions.bind(this));
+			this.menuIconBorder.click(this.menuBurger.bind(this));
+		}
+	}, {
+		key: 'menuBurger',
+		value: function menuBurger() {
+			this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+			this.menuIconBorder.toggleClass('site-header__menu-icon__border--enlarge');
+		}
+	}, {
+		key: 'timedFunctions',
+		value: function timedFunctions() {
+			if (document.title === "Get Fit Mama") {
+				if (this.menuContent.hasClass('site-header__menu-content--to-fade-out-first')) {
+					this.toggleTheMenu();
+					this.menuContent.removeClass('site-header__menu-content--to-fade-out-first');
+					setTimeout(this.hideTrapeze.bind(this), 300);
+				} else {
+					this.hideTrapeze();
+					setTimeout(this.toggleTheMenu.bind(this), 300);
+				}
+			} else {
+				this.toggleTheMenu();
+			}
+		}
+	}, {
+		key: 'hideTrapeze',
+		value: function hideTrapeze() {
+			this.trapeze.toggleClass('large-hero__mobile-svg-bg--is-hidden');
+			this.largeHeroCtaTop.toggleClass('large-hero__CTA__top--is-hidden');
 		}
 	}, {
 		key: 'toggleTheMenu',
 		value: function toggleTheMenu() {
 			this.menuContent.toggleClass('site-header__menu-content--is-visible');
-			this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+			this.menuContent.addClass('site-header__menu-content--to-fade-out-first');
+		}
+	}, {
+		key: 'blinkblink',
+		value: function blinkblink() {
+			setInterval(function () {
+				document.body.style.backgroundColor = document.body.style.backgroundColor == "#fafafa" ? "pink" : "#fafafa";
+			}, 1000);
 		}
 	}]);
 
@@ -11286,18 +11327,27 @@ var StickyHeader = function () {
 		_classCallCheck(this, StickyHeader);
 
 		this.goTopArrow = (0, _jquery2.default)('.go-top-arrow');
-		this.siteHeader = (0, _jquery2.default)('.site-header__menu-content');
-		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
 		this.goTop = (0, _jquery2.default)('#go-top-link');
-		this.headerTrigger = (0, _jquery2.default)('.large-hero__learn-more-btn');
-		this.pageSections = (0, _jquery2.default)('.page-section');
+		this.headerTrigger = (0, _jquery2.default)('.go-top-arrow-trigger');
 		this.headerLinks = (0, _jquery2.default)('.primary-nav a');
 		this.categoryLink = (0, _jquery2.default)('#go-category-link');
-		// this.createGoTopArrowWaypoint();
-		this.createHideMobileMenuOutOfSight();
+		this.siteHeader = (0, _jquery2.default)('.site-header__menu-content');
+		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
+		this.mobileSvgBg = (0, _jquery2.default)('.large-hero__mobile-svg-bg');
+		this.mobileSvgTxt = (0, _jquery2.default)('.large-hero__CTA');
+
+		this.hideMobileMenuTrigger = (0, _jquery2.default)('.main-content__personal-note');
+
+		this.pageSections = (0, _jquery2.default)('.page-section');
+		this.createGoTopArrowWaypoint();
 		this.createPageSectionWaypoints();
-		this.createGoCategoryWaypoint();
+		this.createHideMobileMenuOutOfSight();
 		this.addSmoothScrolling();
+		if (document.title === "Get Fit Mama") {
+			this.createGoCategoryWaypoint();
+		} else {
+			console.log('x');
+		}
 	}
 
 	_createClass(StickyHeader, [{
@@ -11316,7 +11366,9 @@ var StickyHeader = function () {
 				handler: function handler(direction) {
 					if (direction == "down") {
 						that.goTopArrow.addClass("arrow--visible");
+						that.goTopArrow.removeClass("go-top-arrow--transition-outside");
 					} else {
+						that.goTopArrow.addClass("go-top-arrow--transition-outside");
 						that.goTopArrow.removeClass("arrow--visible");
 					}
 				}
@@ -11342,11 +11394,13 @@ var StickyHeader = function () {
 		value: function createHideMobileMenuOutOfSight() {
 			var that = this;
 			new Waypoint({
-				element: this.headerTrigger[0],
+				element: this.hideMobileMenuTrigger[0],
 				handler: function handler(direction) {
 					if (direction == "down") {
 						that.menuIcon.removeClass("site-header__menu-icon--close-x");
-						that.siteHeader.removeClass("site-header__menu-content--is-visible");
+						that.siteHeader.removeClass("site-header__menu-content--is-visible site-header__menu-content--to-fade-out-first");
+						that.mobileSvgBg.removeClass("large-hero__mobile-svg-bg--is-hidden");
+						that.mobileSvgTxt.removeClass("large-hero__CTA__top--is-hidden");
 					}
 				}
 			});
@@ -11784,6 +11838,23 @@ var Modal = function () {
 		this.openModalButton = (0, _jquery2.default)('.open-modal');
 		this.modal = (0, _jquery2.default)('.modal');
 		this.closeModalButton = (0, _jquery2.default)('.modal__close');
+
+		this.moreButtonContainerFirst = (0, _jquery2.default)('.page-section__more-btn-1');
+		this.moreButtonContainerSecond = (0, _jquery2.default)('.page-section__more-btn-2');
+		this.moreButtonContainerThird = (0, _jquery2.default)('.page-section__more-btn-3');
+		this.moreButtonContainerFourth = (0, _jquery2.default)('.page-section__more-btn-4');
+		this.moreButtonContainerFifth = (0, _jquery2.default)('.page-section__more-btn-5');
+
+		this.moreButtonFirst = (0, _jquery2.default)('.c-t-a__more__btn-1'); //temporary for certs
+		this.moreButtonSecond = (0, _jquery2.default)('.c-t-a__more__btn-2'); //temporary for certs
+		this.moreButtonThird = (0, _jquery2.default)('.c-t-a__more__btn-3'); //temporary for certs
+		this.moreButtonFourth = (0, _jquery2.default)('.c-t-a__more__btn-4'); //temporary for certs
+
+		this.certsGroup1 = (0, _jquery2.default)('.certificates-group-1'); //temporary for certs
+		this.certsGroup2 = (0, _jquery2.default)('.certificates-group-2'); //temporary for certs
+		this.certsGroup3 = (0, _jquery2.default)('.certificates-group-3'); //temporary for certs
+		this.certsGroup4 = (0, _jquery2.default)('.certificates-group-4'); //temporary for certs
+
 		this.events();
 	}
 
@@ -11796,6 +11867,12 @@ var Modal = function () {
 			this.closeModalButton.click(this.closeModal.bind(this));
 			//escape key
 			(0, _jquery2.default)(document).keyup(this.keyPressHandler.bind(this));
+
+			//temp for certs
+			this.moreButtonFirst.click(this.showMoreCertsGroup1.bind(this));
+			this.moreButtonSecond.click(this.showMoreCertsGroup2.bind(this));
+			this.moreButtonThird.click(this.showMoreCertsGroup3.bind(this));
+			this.moreButtonFourth.click(this.showMoreCertsGroup4.bind(this));
 		}
 	}, {
 		key: 'openModal',
@@ -11815,6 +11892,35 @@ var Modal = function () {
 				this.closeModal();
 			}
 		}
+	}, {
+		key: 'showMoreCertsGroup1',
+		value: function showMoreCertsGroup1() {
+			this.certsGroup1.toggleClass('exercise-icons--group-hidden');
+			this.moreButtonContainerFirst.toggleClass('more-btn--hidden');
+			this.moreButtonContainerSecond.toggleClass('more-btn--hidden');
+		}
+	}, {
+		key: 'showMoreCertsGroup2',
+		value: function showMoreCertsGroup2() {
+			this.certsGroup2.toggleClass('exercise-icons--group-hidden');
+			this.moreButtonContainerSecond.toggleClass('more-btn--hidden');
+			this.moreButtonContainerThird.toggleClass('more-btn--hidden');
+		}
+	}, {
+		key: 'showMoreCertsGroup3',
+		value: function showMoreCertsGroup3() {
+			this.certsGroup3.toggleClass('exercise-icons--group-hidden');
+			this.moreButtonContainerThird.toggleClass('more-btn--hidden');
+			this.moreButtonContainerFourth.toggleClass('more-btn--hidden');
+		}
+	}, {
+		key: 'showMoreCertsGroup4',
+		value: function showMoreCertsGroup4() {
+			this.certsGroup4.toggleClass('exercise-icons--group-hidden');
+			// this.moreButtonContainerThird.toggleClass('more-btn--hidden');
+			this.moreButtonContainerFourth.toggleClass('more-btn--hidden');
+			this.moreButtonContainerFifth.toggleClass('more-btn--hidden');
+		}
 	}]);
 
 	return Modal;
@@ -11830,42 +11936,7 @@ exports.default = Modal;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var VideoFrame = function () {
-	function VideoFrame() {
-		_classCallCheck(this, VideoFrame);
-
-		this.videoFrame = document.getElementById('video_frame');
-		this.VideoFrameRateSlowDown();
-	}
-
-	_createClass(VideoFrame, [{
-		key: 'VideoFrameRateSlowDown',
-		value: function VideoFrameRateSlowDown() {
-			this.videoFrame.playbackRate = 0.6;
-		}
-	}]);
-
-	return VideoFrame;
-}();
-
-exports.default = VideoFrame;
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -11879,29 +11950,55 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ObjectFitWorkaround = function () {
-    function ObjectFitWorkaround() {
-        _classCallCheck(this, ObjectFitWorkaround);
+  function ObjectFitWorkaround() {
+    _classCallCheck(this, ObjectFitWorkaround);
 
-        this.injectJsIfWindowsBrowser();
+    this.injectJsIfWindowsBrowser();
+  }
+
+  _createClass(ObjectFitWorkaround, [{
+    key: 'injectJsIfWindowsBrowser',
+    value: function injectJsIfWindowsBrowser() {
+      if (!Modernizr.objectfit) {
+        console.log('this one does not support object-fit this one is Edgy xD');
+        (0, _jquery2.default)('.large-hero').each(function () {
+          var $container = (0, _jquery2.default)(this),
+              imgUrl = $container.find('img').prop('src'),
+              $picture = (0, _jquery2.default)('.large-hero picture img');
+          // $pictureElement = $('.large-hero picture');
+
+          $picture.attr({
+            'src': '',
+            'alt': ''
+          });
+          // $picture.attr('alt','');
+          console.log($picture);
+          console.log($picture[0]);
+          console.log($picture[1]);
+          console.log(imgUrl);
+          console.log($container);
+          if (imgUrl) {
+            $picture.css('backgroundImage', 'url(' + imgUrl + ')').addClass('compat-object-fit');
+          }
+        });
+        (0, _jquery2.default)('.modal').each(function () {
+          var $container = (0, _jquery2.default)(this),
+              imgUrl = $container.find('img').prop('src'),
+              $picture = (0, _jquery2.default)('.modal picture img');
+          $picture.attr({
+            'src': '',
+            'alt': ''
+          });
+          if (imgUrl) {
+            $picture.css('backgroundImage', 'url(' + imgUrl + ')').addClass('compat-object-fit');
+          }
+        });
+        (0, _jquery2.default)(".site-header__language__container").css('width', '180px');
+      }
     }
+  }]);
 
-    _createClass(ObjectFitWorkaround, [{
-        key: 'injectJsIfWindowsBrowser',
-        value: function injectJsIfWindowsBrowser() {
-            if (!Modernizr.objectfit) {
-                console.log('this one does not support object-fit this one is Edgy xD');
-                (0, _jquery2.default)('.large-hero').each(function () {
-                    var $container = (0, _jquery2.default)(this),
-                        imgUrl = $container.find('img').prop('src');
-                    if (imgUrl) {
-                        $container.css('backgroundImage', 'url(' + imgUrl + ')').addClass('compat-object-fit');
-                    }
-                });
-            }
-        }
-    }]);
-
-    return ObjectFitWorkaround;
+  return ObjectFitWorkaround;
 }();
 
 exports.default = ObjectFitWorkaround;

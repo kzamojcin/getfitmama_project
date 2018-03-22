@@ -5,18 +5,27 @@ import smoothScroll from 'jquery-smooth-scroll';
 class StickyHeader{
 	constructor(){
 		this.goTopArrow = $('.go-top-arrow');
-		this.siteHeader = $('.site-header__menu-content');
-		this.menuIcon = $(".site-header__menu-icon");
 		this.goTop = $('#go-top-link');
-		this.headerTrigger = $('.large-hero__learn-more-btn');
-		this.pageSections = $('.page-section');
+		this.headerTrigger = $('.go-top-arrow-trigger');
 		this.headerLinks = $('.primary-nav a');
 		this.categoryLink = $('#go-category-link');
-		// this.createGoTopArrowWaypoint();
-		this.createHideMobileMenuOutOfSight();
+		this.siteHeader = $('.site-header__menu-content');
+		this.menuIcon = $(".site-header__menu-icon");
+		this.mobileSvgBg = $('.large-hero__mobile-svg-bg');
+		this.mobileSvgTxt = $('.large-hero__CTA');
+
+		this.hideMobileMenuTrigger = $('.main-content__personal-note');
+
+		this.pageSections = $('.page-section');
+		this.createGoTopArrowWaypoint();
 		this.createPageSectionWaypoints();
-		this.createGoCategoryWaypoint();
+		this.createHideMobileMenuOutOfSight();
 		this.addSmoothScrolling();		
+		if ( document.title === "Get Fit Mama"){
+			this.createGoCategoryWaypoint();
+		}else{
+			console.log('x');
+		}		
 	}
 	addSmoothScrolling(){
 		this.headerLinks.smoothScroll();
@@ -31,7 +40,9 @@ class StickyHeader{
 			handler: function(direction){
 				if(direction == "down"){
 					that.goTopArrow.addClass("arrow--visible");
+					that.goTopArrow.removeClass("go-top-arrow--transition-outside");
 				}else{
+					that.goTopArrow.addClass("go-top-arrow--transition-outside");
 					that.goTopArrow.removeClass("arrow--visible");
 				}
 			}
@@ -53,11 +64,13 @@ class StickyHeader{
 	createHideMobileMenuOutOfSight(){
 		var that = this;
 		new Waypoint({
-			element: this.headerTrigger[0],
+			element: this.hideMobileMenuTrigger[0],
 			handler: function(direction){
 				if(direction == "down"){
 					that.menuIcon.removeClass("site-header__menu-icon--close-x");
-					that.siteHeader.removeClass("site-header__menu-content--is-visible");
+					that.siteHeader.removeClass("site-header__menu-content--is-visible site-header__menu-content--to-fade-out-first");					
+					that.mobileSvgBg.removeClass("large-hero__mobile-svg-bg--is-hidden");
+					that.mobileSvgTxt.removeClass("large-hero__CTA__top--is-hidden");
 				}
 			}
 		});

@@ -1,0 +1,50 @@
+.drop-down-menu{
+    position: relative;
+    transition: all .8s ease-in-out;    
+    &:hover{
+        height: 200px;
+        .drop-down-menu__list{
+            visibility: visible;
+            height: auto;            
+            a{
+                color: $mainBlue;
+            }
+        }
+        .drop-down-menu__list a:hover{
+            color: $mainPink;
+            text-shadow: 0px 0px rgba(0,0,0,.3);
+        }
+    }
+    &--taller{
+        &:hover{
+            height: 230px;
+        }
+    }
+    &__list{
+        display: inline-block;
+        visibility: hidden;
+        box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.4);
+        
+        position: absolute;
+        width: 130px;
+        top:51px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $mainWhite;
+        & li {
+            position: relative;
+            margin: auto;
+            margin-bottom: 10px;
+            float: none;
+            padding: 0 5px;
+            &:hover::after{
+                content: '';
+                width: 0;
+            }
+        }
+    }
+    &__list :last-child{
+        margin-bottom: 15px;
+    }
+}

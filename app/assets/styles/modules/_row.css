@@ -1,7 +1,6 @@
 .row{
 	@mixin clearfix;
 	height: 33.33%;
-
 	&--txt-align-c{
 		text-align: center;
 	}
@@ -9,6 +8,9 @@
 		text-align: right;
 	}
 	&__relative{
+		position: relative;
+	}
+	&--pos-relative{
 		position: relative;
 	}
 
@@ -51,7 +53,6 @@
 			position: relative;
 		}
 	}
-
 	@mixin atLarge{
 		&__large-4{
 			width: 33.33%;
@@ -74,14 +75,18 @@
 			margin-bottom: 2px;
 		}
 	}
-
-	.flexbox &--equal-height-at-medium{
-		@mixin atMedium{
-			display: flex;
+}
+.row__large-6{
+	a{
+		&:hover > picture > img{
+			cursor: pointer;
+			transform: scale(1.05);
 		}
-		& > div {
-			float: none;
-			display: flex;
+		&:hover + .btn{
+			background-color: $mainPink;
+			cursor: pointer;
+			border: 1px solid $mainPink;
+			box-shadow: -1.544px -0.59px 7px 0px rgba(0, 0, 0, 0.35);
 		}
-	}
+	}	
 }

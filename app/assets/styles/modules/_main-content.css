@@ -1,35 +1,120 @@
 .main-content{
         margin: 0 auto;
-        margin-bottom: 4.1875rem;
-    &__title{
+        margin-bottom: 3.75rem;
+        font-family: "Source Sans Pro";
+    &__personal-note{
+        text-align: center;
+        color: $mainBlue;
         max-width: 451px;
-        font-size: 2.04375rem;
-        font-family: "Segoe Script";
-        font-weight: 500;
-        color: rgb(98, 64, 139);        
-        padding-bottom: 67px;
-        letter-spacing: 0.1625rem;
+        font-size: 1.8375rem;
+        font-family: "Indie Flower", cursive;
+        font-weight: 500;        
+        padding-bottom: 40px;
+        letter-spacing: 0.08em;
+        &--wide{
+            max-width: 700px !important;
+        }
+        &--welcome{
+            font-size: 2.5rem;
+            @mixin atSmall{
+                font-size: 3.3rem;
+            }
+            @mixin atMedium{
+                font-size: 3.7rem !important;
+            }
+        }
+        &--welcome--polish{
+            font-family: "Caveat", cursive;    
+        }
+        @mixin atMedium{
+            font-size: 2.24375rem;
+            padding-bottom: 60px;
+            max-width: 520px;
+        }
+    }
+    &__personal-note--polish{
+        font-family: "Caveat", cursive;
+        font-size: 2.0375rem;
+        @mixin atMedium{
+            font-size: 2.44375rem;
+        }
+    }
+    &__title{
+        max-width: 812px;
+        padding-left: 18px;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        font-size: 1.4rem;
+        font-family: 'pt_sans-web-regular-poprawiona', sans-serif;
+        font-variant: small-caps;
+        @mixin atSmall{
+            font-size: 1.6rem;
+        }
+        @mixin atLarge{
+            font-size: 1.8rem;
+        }
     }
     &__article{
-        font-family: "Source Sans Pro";
+        margin: 0 auto;
         font-weight: 400;
-        font-size: 1rem;
+        font-size: .95rem;
         max-width: 812px;
-        color: rgb(98, 64, 139);
         background-color: #f7f4f7; 
         line-height: 25.8352px; 
-        letter-spacing: 0.1075rem;
+        letter-spacing: 0.08em;
         padding: 12px 18px;
         p{
-            margin: 0;
-        }
-        p:first-child{
-             padding-bottom: 20px;
+            margin: 0;            
         }
         ul{
             list-style-type: none;
             font-style: italic;
             font-weight: 300;
+        }
+        &--indent{
+            padding-left: 30px;
+        }
+        &--big{
+            color: $mainPink;
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.13em;            
+            &--italic{
+                font-size: 1.24rem;
+                font-style: italic;
+            }
+            &__testimonial{
+                @mixin atSmall{
+                    font-size: 1.1238rem !important;
+                    padding: 30px 0 !important;
+                }
+            }
+            @mixin atSmall{
+                font-size: 1.15rem;
+            }
+            @mixin atMedium{
+                font-size: 1.2238rem;
+                letter-spacing: 0.14em;
+            }
+            @mixin atMedium{}
+            @mixin atLarge{}
+        }
+        &--tall-line-height{
+            padding: 45px 0;
+            line-height: 1.215;
+            &--menopause{
+                padding: 15px 0;
+            }
+        }
+        &--last-paragraph{
+            padding-bottom: 10px !important;
+        }
+        @mixin atSmall{
+            font-size: 1rem;
+        }
+        @mixin atMedium{
+            font-size: 1.1rem;
         }
     }
 }

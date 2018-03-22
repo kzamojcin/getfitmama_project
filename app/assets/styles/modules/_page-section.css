@@ -1,3 +1,6 @@
 .page-section{	
-	margin-bottom: 4.1875rem;
+	margin-bottom: 3.75rem;	
+	@mixin atLarge{
+		margin-bottom: 5rem;
+	}
 }

@@ -1,9 +1,66 @@
-.large-hero{
-    &.compat-object-fit {
-        background-size: cover;
-        background-position: center center;
-        .large-hero__image {
-            display: none;
-        }
-    }    
+.compat-object-fit {	
+	@mixin atLarge{
+        background-position: center 280px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: auto 500px;
+
+        height: 850px;           
+        &__home{
+        	background-position: center top;
+        	background-size: cover; 
+        	height: 98vh; 
+			background-image: url("../../assets/images/category/landing_page/fit-mama-z-usmiechem-zaprasza-na-cwiczenia--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/landing_page/fit-mama-z-usmiechem-zaprasza-na-cwiczenia--large-hi-dpi.jpg");
+			}
+		}
+		&__about-me{ 
+			background-image: url("../../assets/images/category/about-me/fit-mama-o-mnie--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/about-me/fit-mama-o-mnie--large-hi-dpi.jpg");
+			}
+		}    
+        &__core{ 
+			background-image: url("../../assets/images/category/core_restore/fit-mama-prezentuje-cwiczenie-typu-core-restore--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/core_restore/fit-mama-prezentuje-cwiczenie-typu-core-restore--large-hi-dpi.jpg");
+			}
+		}
+		&__pregnancy{ 
+			background-image: url("../../assets/images/category/pregnancy/fit-mama-jak-cwiczyc-w-ciazy--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/pregnancy/fit-mama-jak-cwiczyc-w-ciazy--large-hi-dpi.jpg");
+			}
+		}
+		&__postpartum{ 
+			background-image: url("../../assets/images/category/postpartum/fit-mama-prezentuje-cwiczenie-w-okresie-pologu--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/postpartum/fit-mama-prezentuje-cwiczenie-w-okresie-pologu--large-hi-dpi.jpg");
+			}
+		}
+		&__menopause{ 
+			background-image: url("../../assets/images/category/menopause/fit-mama-prezentuje-cwiczenie-w-okresie-menopauzy--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/menopause/fit-mama-prezentuje-cwiczenie-w-okresie-menopauzy--large-hi-dpi.jpg");
+			}
+		}
+		&__lifestyle{ 
+			background-image: url("../../assets/images/category/lifestyle/fit-mama-wybiera-zdrowa-zywnosc--large.jpg");
+			@mixin atXLarge{
+				background-image: url("../../assets/images/category/lifestyle/fit-mama-wybiera-zdrowa-zywnosc--large-hi-dpi.jpg");
+			}
+		}
+    }
+    @mixin atHeight{
+	        background-size: auto 850px;
+	        &__home{
+	        	background-size: cover;
+	        }
+	    }
+    img{
+    	@mixin atLarge{
+    		display: none;
+    	}
+    }
 }

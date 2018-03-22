@@ -1,0 +1,95 @@
+.c-t-a{
+    text-align: center;
+    font-family: "Source Sans Pro";
+    max-width: 812px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &--m-bottom{
+        margin-bottom: 60px;
+        @mixin atSmall{
+            margin-bottom: 80px;    
+        }
+    }
+    &--big{
+        font-size: 1.0238rem;
+        letter-spacing: 0.13em;
+    }
+    &--small{
+        font-weight: 400;
+        font-size: 0.7986rem;
+        letter-spacing: 0.08em;
+        @mixin atSmall{
+            font-size: 0.8613rem;
+        }
+    }
+    &__g-i-t{
+        display: inline-block;
+        margin: 0 auto;           
+        &--with-call{
+            margin-bottom: 40px;
+            p{ 
+                font-family: "Indie Flower", cursive;
+                font-weight: 500;
+                font-size: 20px;
+            }        
+        }     
+        &__btn{
+            transform-origin: 50% 50%;
+            color: $mainWhite;
+            background-color: $mainPurple;
+            transition: all .3s ease-in-out;
+            width: 186px;
+            height: 41px;
+            @mixin atMedium{
+                width: 210px;
+                height: 51px;
+            }   
+            p{
+                margin: 0 !important;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);                
+                font-family: "PT Sans";
+                font-variant: small-caps;
+                font-size: 1.5625rem;
+                @mixin atMedium{
+                    font-size: 1.8rem;
+                }                
+            }
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+        @mixin atMedium{
+            margin-bottom: 80px;
+        }        
+    }
+    &__more__btn-{        
+        &1, &2, &3, &4, &5{
+            transform-origin: 50% 50%;
+                color: $mainBlue;
+                background-color: $mainWhite;
+                border: 1px solid $mainBlue;
+                transition: all .3s ease-in-out;
+                width: 186px;
+                height: 41px;
+            p{
+                margin: 0 !important;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);                
+                font-family: "PT Sans";
+                font-variant: small-caps;
+                font-size: 25px;                
+            }
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+            } 
+        }
+        &5{
+            margin: 0 auto;
+        }          
+    }    
+}

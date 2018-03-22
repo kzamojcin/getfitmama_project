@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,21 +73,20 @@
 /* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */,
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+__webpack_require__(10);
+
 __webpack_require__(11);
 
 __webpack_require__(12);
 
-__webpack_require__(13);
-
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -97,7 +96,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /*!
  * modernizr v3.5.0
- * Build https://modernizr.com/download?-flexbox-objectfit-svg-setclasses-dontmin
+ * Build https://modernizr.com/download?-objectfit-svg-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -318,6 +317,30 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   }
 
   ;
+  /*!
+  {
+    "name": "SVG",
+    "property": "svg",
+    "caniuse": "svg",
+    "tags": ["svg"],
+    "authors": ["Erik Dahlstrom"],
+    "polyfills": [
+      "svgweb",
+      "raphael",
+      "amplesdk",
+      "canvg",
+      "svg-boilerplate",
+      "sie",
+      "dojogfx",
+      "fabricjs"
+    ]
+  }
+  !*/
+  /* DOC
+  Detects support for SVG in `<embed>` or `<object>` elements.
+  */
+
+  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
@@ -826,94 +849,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   ModernizrProto.testAllProps = testPropsAll;
 
   /**
-   * testAllProps determines whether a given CSS property is supported in the browser
-   *
-   * @memberof Modernizr
-   * @name Modernizr.testAllProps
-   * @optionName Modernizr.testAllProps()
-   * @optionProp testAllProps
-   * @access public
-   * @function testAllProps
-   * @param {string} prop - String naming the property to test (either camelCase or kebab-case)
-   * @param {string} [value] - String of the value to test
-   * @param {boolean} [skipValueTest=false] - Whether to skip testing that the value is supported when using non-native detection
-   * @example
-   *
-   * testAllProps determines whether a given CSS property, in some prefixed form,
-   * is supported by the browser.
-   *
-   * ```js
-   * testAllProps('boxSizing')  // true
-   * ```
-   *
-   * It can optionally be given a CSS value in string form to test if a property
-   * value is valid
-   *
-   * ```js
-   * testAllProps('display', 'block') // true
-   * testAllProps('display', 'penguin') // false
-   * ```
-   *
-   * A boolean can be passed as a third parameter to skip the value check when
-   * native detection (@supports) isn't available.
-   *
-   * ```js
-   * testAllProps('shapeOutside', 'content-box', true);
-   * ```
-   */
-
-  function testAllProps(prop, value, skipValueTest) {
-    return testPropsAll(prop, undefined, undefined, value, skipValueTest);
-  }
-  ModernizrProto.testAllProps = testAllProps;
-
-  /*!
-  {
-    "name": "Flexbox",
-    "property": "flexbox",
-    "caniuse": "flexbox",
-    "tags": ["css"],
-    "notes": [{
-      "name": "The _new_ flexbox",
-      "href": "http://dev.w3.org/csswg/css3-flexbox"
-    }],
-    "warnings": [
-      "A `true` result for this detect does not imply that the `flex-wrap` property is supported; see the `flexwrap` detect."
-    ]
-  }
-  !*/
-  /* DOC
-  Detects support for the Flexible Box Layout model, a.k.a. Flexbox, which allows easy manipulation of layout order and sizing within a container.
-  */
-
-  Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
-
-  /*!
-  {
-    "name": "SVG",
-    "property": "svg",
-    "caniuse": "svg",
-    "tags": ["svg"],
-    "authors": ["Erik Dahlstrom"],
-    "polyfills": [
-      "svgweb",
-      "raphael",
-      "amplesdk",
-      "canvg",
-      "svg-boilerplate",
-      "sie",
-      "dojogfx",
-      "fabricjs"
-    ]
-  }
-  !*/
-  /* DOC
-  Detects support for SVG in `<embed>` or `<object>` elements.
-  */
-
-  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
-
-  /**
    * atRule returns a given CSS property at-rule (eg @keyframes), possibly in
    * some prefixed form, or false, in the case of an unsupported rule
    *
@@ -1097,7 +1032,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(window, document);
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
@@ -2648,7 +2583,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 (function(window, factory) {

@@ -1,0 +1,12 @@
+.bricks-gallery{	
+	position: relative;	
+	&__image-brick{
+		width: 100vw;
+		height: 100%;
+		object-fit: fill;
+		transition: transform .3s ease-in-out;		
+	}	
+	&--no-line-height{
+		line-height: 0;
+	}
+}

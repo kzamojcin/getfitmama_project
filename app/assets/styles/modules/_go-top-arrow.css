@@ -2,41 +2,84 @@
 	position: fixed;
 	visibility: hidden;
 	opacity: 0;
-	z-index: 9999;
-	top: 90%;
+	z-index: 10;
+	bottom: 20px;
 	right: 15px;
-	width: 50px;
-	height: 50px;
-	background-color: #e6dfd5;
+	width: 30px;
+	height: 30px;
+	border: 1px solid rgba(98, 64, 139, .2);
 	transition: all .5s ease-in-out, background-color .1s ease-in-out;
-	border-radius: 20%;
+	border-radius: 5%;	
+	@mixin atLarge{
+		border: 0;
+		background-color: rgba(98, 64, 139, .3);
+		width: 100px;
+		height: 40px;		
+	}
 	
+	&__text{
+		position: absolute;
+		color: $mainWhite;
+		top: 13px;
+		right: 10px;
+		font-size: 16px;
+		/*font-family: "PT sans";		*/
+		/*font-family: "Caveat";*/
+		/*font-family: "Indie Flower";*/
+		margin: 0;
+		display: none;
+		@mixin atLarge{
+			&--visible{
+				display: block;
+			}
+		}
+	}
+
 	&::before{
 		position: absolute;
 		content: '';
 		top: 7px;
-		left: -8px;
-		width: 33px;
-		height: 10px;
-		background-color: white;
+		left: 0px;
+		width: 14px;
+		height: 5px;
+		background-color: rgba(98, 64, 139, .6);
 		transform-origin: top right;
 		transform: rotate(315deg);
-		
+		@mixin atLarge{
+			top: 13px;
+			left: 0px;
+			width: 15px;
+			height: 5px;
+			background-color: $mainWhite;
+		}
 	}
 	&__right-bar{
 		position: absolute;
 		top: 7px;
-		left: 25px;
-		width: 33px;
-		height: 10px;
-		background-color: black;
+		left: 14px;
+		width: 14px;
+		height: 5px;
+		background-color: rgba(98, 64, 139, .6);
 		transform-origin: top left;
 		transform: rotate(45deg);
+		@mixin atLarge{
+			top: 13px;
+			left: 15px;
+			width: 15px;
+			height: 5px;
+			background-color: $mainWhite;
+		}
 	}
 	&:hover{
-		background-color: #c6b69f;
+		/*background-color: #c6b69f;*/
+		background-color: rgba(98, 64, 139, .2);
+		@mixin atLarge{
+			background-color: $mainPink;
+		}
 	}
-
+	&--transition-outside{
+		right: 0;
+	}
 }
 .arrow--visible{
 	visibility: visible;

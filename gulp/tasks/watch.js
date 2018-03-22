@@ -11,7 +11,7 @@ gulp.task('watch', function(){
 		}
 	});
 
-	watch(['./app/index.html','./app/fit-postpartum/index.html','./app/about-me/index.html','./app/fit-pregnancy/index.html','./app/fit-menopause/index.html','./app/fit-core-restore/index.html','./app/nutrition/index.html'], function(){
+	watch(['./app/index.html','./app/en/index.html','./app/fit-postpartum/index.html','./app/fit-postpartum/en/index.html','./app/about-me/index.html','./app/about-me/en/index.html','./app/fit-pregnancy/index.html','./app/fit-pregnancy/en/index.html','./app/fit-menopause/index.html','./app/fit-menopause/en/index.html','./app/fit-core-restore/index.html','./app/fit-core-restore/en/index.html','./app/nutrition/index.html','./app/nutrition/en/index.html'], function(){
 		browserSync.reload();
 	});
 

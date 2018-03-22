@@ -1,0 +1,98 @@
+.exercise-icons{
+    margin: 0 auto;
+    max-width: 812px;
+    margin-bottom: 5rem;
+    &__title{
+        font-size: 1.5475rem;
+        letter-spacing: 0.08em;
+        padding-left: 18px;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+        @mixin atMedium{
+            padding-bottom: 80px;
+        }
+        &--w-list{
+            padding-bottom: 10px;
+        }
+    }
+    &--wide{
+        max-width: 950px;
+    }
+    &__gallery{
+        position: relative;
+        display: flex;  
+        width: 300px;      
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 3.75rem;
+        @mixin atMedium{
+            width: 600px;
+            &--narrow{
+                width: 392px;
+            }
+        }
+        img{
+            margin: 0 auto;
+        }
+        p{
+            display: inline-block;
+            color: $mainPurple;
+            max-width: 150px;
+            margin: 0 auto;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            line-height: 1.14;
+            margin-bottom: 20px;
+            img
+            {
+                margin-bottom: 20px;
+            }           
+        }   
+        &--m-bottom{
+            margin-bottom: 120px;
+        }
+        span{
+            color: $mainWhite;
+        }
+        &--txt-color{
+            color: $mainPink !important;
+        }
+    }
+    &__list{
+
+        font-family: "Source Sans Pro";
+        list-style-type:none;
+        font-size: 0.86rem;
+        font-style: italic;
+        letter-spacing: 0.08em;
+        line-height: 1.5;
+        @mixin atMedium{
+            font-size: 0.96rem;
+        }
+        &--visible-until-medium{
+            @mixin atMedium{
+                display: none;                
+            }
+        }
+        &--narrow{
+            margin: auto;
+            max-width: 812px;
+            padding-left: 18px;
+        }
+    }
+    &__img{
+        display: block;
+        transform: scale(.9);
+        padding-bottom: 5px;
+        @mixin atSmall{
+            padding-bottom: 10px;
+        }
+    }
+    &__icons-container{
+        margin: 0 auto;
+    }
+    @mixin atLarge{
+        margin: 0 auto;
+        margin-bottom: 5rem;
+    }
+}

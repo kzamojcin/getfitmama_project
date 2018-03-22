@@ -1,22 +1,46 @@
 .testimonials{
     max-width: 812px;
-    margin: 0 auto;    
-    margin-bottom: 4.1875rem;
-    p{
-        margin: 0;
-        padding-bottom: 4.1875rem;
+    margin: 0 auto;
+    &__name{
         font-family: "Source Sans Pro";
-        font-size: 1rem;
         font-weight: 300;
-        letter-spacing: 0.08rem;
-        color: rgb(98, 64, 139);
+        letter-spacing: 0.08em;
+        font-size: 15.78px;
+        padding-bottom: 3.75rem;
+        padding-left: 18px;
+        margin: 0;
+        &--fs-normal{
+            font-style: normal;
+            font-size: 1rem;
+        }
     }    
     &__video{     
-        margin: 0;   
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 566px;
+        margin: 0 auto;
+        width: 90%;   
+        max-width: 576px;
+        margin-bottom: 7.5rem;
+        text-align: center;
+        &__clip{
+            border: 2px solid $mainBlue;
+            width: 276px; 
+            @mixin atSmall{
+                width: initial;
+            }  
+        }
+        &--short{            
+            max-height: 400px;
+            @mixin atLarge{
+                max-height: initial;
+            }
+        }
+        
+    }
+    &__img{
+        max-width: 314px;
         border: 2px solid $mainBlue;
+        width: 246px; 
+            @mixin atSmall{
+                width: initial;
+            } 
     }
 }
