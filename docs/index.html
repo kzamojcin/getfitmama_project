@@ -17,8 +17,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
 	
 
-	<link rel="stylesheet" href="assets/styles/styles-7b1f558a27.css"/>
-	<script src="assets/scripts/Vendor-ac106f275e.js"></script>
+	<!--build:css assets/styles/styles.css -->
+	<link rel="stylesheet" href="temp/styles/styles.css">
+	<!-- endbuild -->
+	<!--build:js assets/scripts/Vendor.js -->
+	<script src="/temp/scripts/Vendor.js"></script>
+	<!-- endbuild -->
 	<!-- Global Site Tag (gtag.js) - Google Analytics -->
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-87039838-2"></script>
 	<script>
@@ -40,11 +44,11 @@
 			</div>	
 			<div class="site-header__language__container">
 				<div class="site-header__language site-header__language--visible">
-					<a href="/en">language - polski</a>
+					<a href="en">language - polski</a>
 					<span class="icon icon--flaga-polski"></span>
 				</div>
 				<div class="site-header__language site-header__language--hidden">
-					<a href="/en">language - english</a>
+					<a href="en">language - english</a>
 					<span class="icon icon--british-flag"></span>
 				</div>	
 			</div>
@@ -58,23 +62,26 @@
 				<nav class="primary-nav">
 					<ul class="site-header__ul-desktop">
 						<li><a href="#" class="open-modal">Kontakt</a></li>
-						<li><a href="/blog" id="">Blog</a></li>
-						<li><a href="/about-me">O mnie</a></li>
+						<!-- <li><a href="/blog" id="">Blog</a></li> -->
+						<li><a href="#" id="">Blog</a></li>
+						<li><a href="about-me">O mnie</a></li>
 						<li class="drop-down-menu drop-down-menu--taller">
 							<a href="#" style="cursor: default;">Oferta</a>
 							<ul class="drop-down-menu__list">
-								<li><a href="/fit-core-restore">Fit Core</a></li>
-								<li><a href="/fit-pregnancy">Fit Ciąża</a></li><br />
-								<li><a href="/fit-postpartum">Fit Połóg</a></li>
-								<li><a href="/fit-menopause">Fit Menopauza</a></li>
-								<li><a href="/lifestyle">Fit Styl Życia</a></li>
+								<!-- <li><a href="/fit-core-restore">Fit Core</a></li> -->
+								<li><a href="fit-core-restore">Fit Core</a></li>
+								<li><a href="fit-pregnancy">Fit Ciąża</a></li><br />
+								<li><a href="fit-postpartum">Fit Połóg</a></li>
+								<li><a href="fit-menopause">Fit Menopauza</a></li>
+								<li><a href="lifestyle">Fit Styl Życia</a></li>
 							</ul>
 						</li>
 					</ul>
 					<ul class="site-header__ul-mobile">
-						<a href="/#go-category" id="go-category-link2"><li>Oferta</li></a>
-						<a href="/about-me"><li>O mnie</li></a>
-						<a href="/blog" id=""><li>Blog</li></a>
+						<a href="#go-category" id="go-category-link2"><li>Oferta</li></a>
+						<a href="about-me"><li>O mnie</li></a>
+						<!-- <a href="/blog" id=""><li>Blog</li></a> -->
+						<a href="#" id=""><li>Blog</li></a>
 						<a href="#" class="open-modal" id=""><li>Kontakt</li></a>
 					</ul>
 				</nav>
@@ -152,7 +159,7 @@
 		
 		<div id="go-category" data-matching-link="#go-category-link" class="row go-category bricks-gallery--no-line-height">        
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/about-me">
+				<a href="about-me">
 				<h2 class="btn">O mnie</h2>				
 				<picture>
 					<img class="bricks-gallery__image-brick" srcset="assets/images/category/about-me/fit-mama-o-mnie-thumbnail--medium.jpg 550w, assets/images/category/about-me/fit-mama-o-mnie-thumbnail--large.jpg 1100w" alt="Get Fit Mama czyta książkę w kawiarni, nie mogąc się doczekać by zacząć z Tobą ćwiczyć.">
@@ -160,7 +167,7 @@
 				</a>
 			</div>        
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/fit-core-restore/">
+				<a href="fit-core-restore/">
 					<h2 class="btn">Fit Core</h2>					
 					<picture>
 						<img class="bricks-gallery__image-brick" srcset="assets/images/category/core_restore/fit-mama-core-restore-thumbnail--medium.jpg 550w, assets/images/category/core_restore/fit-mama-core-restore-thumbnail--large.jpg 1100w" alt="Get Fit Mama prezentuje ćwiczenie na zestaw mięśni Core.">
@@ -170,7 +177,7 @@
 		</div>
 		<div class="row bricks-gallery--no-line-height">
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/fit-pregnancy">
+				<a href="fit-pregnancy">
 					<h2 class="btn">Fit ciąża</h2>
 					<picture>
 						<img class="bricks-gallery__image-brick" srcset="assets/images/category/pregnancy/fit-mama-jak-cwiczyc-w-ciazy-thumbnail--medium.jpg 550w, assets/images/category/pregnancy/fit-mama-jak-cwiczyc-w-ciazy-thumbnail--large.jpg 1100w" alt="Get Fit Mama prezentuje ćwiczenie na zestaw mięśni Core.">
@@ -178,7 +185,7 @@
 				</a>					
 			</div>
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/fit-postpartum">
+				<a href="fit-postpartum">
 					<h2 class="btn">Fit połóg</h2>
 					<picture>
 						<img class="bricks-gallery__image-brick" srcset="assets/images/category/postpartum/fit-mama-polog-thumbnail--medium.jpg 550w, assets/images/category/postpartum/fit-mama-polog-thumbnail--large.jpg 1100w" alt="Get Fit Mama prezentuje ćwiczenie, które można wykonywać w okresie połogu.">
@@ -188,7 +195,7 @@
 		</div>
 		<div class="row bricks-gallery--no-line-height">
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/fit-menopause">
+				<a href="fit-menopause">
 					<h2 class="btn">Fit Menopauza</h2>
 					<picture>
 						<img class="bricks-gallery__image-brick" srcset="assets/images/category/menopause/fit-mama-menopause-thumbnail--medium.jpg 550w, assets/images/category/menopause/fit-mama-menopause-thumbnail--large.jpg 1100w" alt="Get Fit Mama prezentuje jedno z wielu ćwiczeń na poprawę samopoczucia w okresie menopauzy.">
@@ -196,7 +203,7 @@
 				</a>
 			</div>
 			<div class="feature-item row__large-6  row--pos-relative">
-				<a href="/lifestyle">
+				<a href="lifestyle">
 					<h2 class="btn">Fit Styl Życia</h2>					
 					<picture>
 						<img class="bricks-gallery__image-brick" srcset="assets/images/category/lifestyle/fit-mama-lifestyle-thumbnail--medium.jpg 550w, assets/images/category/lifestyle/fit-mama-lifestyle-thumbnail--large.jpg 1100w" alt="Get Fit Mama wybiera zdrową żywność na małym lokalnym targowisku.">
@@ -297,6 +304,8 @@
     	</div>
     	<div class="modal__close">X</div>
   	</div>
-	<script src="assets/scripts/App-b5316ed087.js"></script>
+	<!--build:js assets/scripts/App.js -->
+	<script src="/temp/scripts/App.js"></script>
+	<!-- endbuild -->
 </body>
 </html>
